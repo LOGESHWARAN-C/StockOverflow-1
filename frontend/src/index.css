@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+/* body {
+  background-image: url("./bg.jpg");
+} */
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: blue;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: blue;
+}
+.content {
+  max-width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-preview h2 {
+  font-size: 20px;
+  color: blue;
+  margin-bottom: 8px;
+}
+
+.blog-preview button {
+  background-color: blue;
+  color: white;
+  font-size: 18px;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+}
+
+.blog-preview a {
+  text-decoration: none;
+}
+
+.blog-details h2 {
+  font-size: 20px;
+  color: blue;
+  margin-bottom: 10px;
+}
+
+.blog-details div {
+  margin: 20px 0;
+}
+
+.blog-details button {
+  background: blue;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: blue;
+  margin-bottom: 30px;
+}
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.SignUp input,
+.SignUp textarea,
+.SignUp select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: blue;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.SignUp button {
+  background: blue;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.SignUp {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.SignUp label {
+  text-align: left;
+  display: block;
+}
+.SignIn button {
+  background: blue;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.SignIn {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.SignIn label {
+  text-align: left;
+  display: block;
+}
+.SignIn input,
+.SignUp textarea,
+.SignUp select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.Poll button {
+  background: blue;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.SignInmongo button {
+  background: blue;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.SignInmongo input,
+select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.SignInmongo h1 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 30px;
+}
+.SignInmongo {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.SignInmongo label {
+  text-align: left;
+  display: block;
+}
+.SignInmongo div {
+  margin: 20px 0;
+}
+
+.d-table {
+  display: table;
+}
+
+.d-table-cell {
+  display: table-cell;
+}
+
+.Mainmongo h1 {
+  font-size: 28px;
+  color: blue;
+  margin-bottom: 30px;
+}
+.Mainmongo {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.w-90 {
+  width: 80%;
+}
+.w-7 {
+  width: 10%;
+}
+.Mainmongo button {
+  background: blue;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button2 {
+  background: white;
+  color: rgb(3, 3, 138);
+  border-width: 4px;
+  border-color: rgb(3, 3, 138);
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+table,
+th {
+  width: 50%;
+}
+
+table th {
+  background-color: black;
+  color: #fafafa;
+}
+
+table tr:nth-child(odd) {
+  background-color: #e4e4e4;
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+  color: #fff;
+}
+
+table {
+  table-layout: fixed;
+  width: 85%;
+}
+td {
+  width: 25%;
+}
+
+.left {
+  margin-left: -60%;
+}
+
+.add {
+  margin-left: -95%;
+}
+
+.delete {
+  margin-left: 0%;
+  margin-top: -20%;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+}

@@ -1,0 +1,20 @@
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWVhNDQ2NmFlZDYyODA0NjQ0YmRhNDkiLCJpYXQiOjE2NDI3NDI5MjAsImV4cCI6MTY0Mjc0NjUyMH0.guO6V-XM13EhMzPelyfpZw3r__7V81LTuhnNARhMESM
+
+mongod --dbpath=data --bind_ip 127.0.0.1
+mongo -> to open REPL
+
+DB REPL commands:
+
+     db
+     use conFusion
+     db
+     db.help()
+
+     db.dishes.insert({ name: "Uthappizza", description: "Test" });
+
+     db.dishes.find().pretty();
+
+     var id = new ObjectId();
+     id.getTimestamp();
+
+     exit

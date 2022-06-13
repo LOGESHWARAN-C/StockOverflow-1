@@ -47,6 +47,14 @@ const Mainmongo = () => {
     var id = prompt("Item ID");
     var name = prompt("Stock name");
     var qty = prompt("Quantity ...");
+    if (parseInt(qty) === parseFloat(qty)) {
+      alert("Qty must be an Integer");
+      return;
+    }
+    if (qty <= 0) {
+      alert("Qty must be positive");
+      return;
+    }
     const body = { id, name, qty };
     post(`http://localhost:3001/new_item`, body, (res) => {
       window.location.reload();
@@ -54,7 +62,17 @@ const Mainmongo = () => {
   };
 
   const purchaseHandler = (id, avail, qty) => {
-    console.log(id, avail, parseInt(qty));
+    if (parseInt(qty) !== parseFloat(qty)) {
+      console.log(parseInt(qty), qty, parseInt(qty) === parseFloat(qty));
+      alert("Qty must be an integer");
+      return;
+    }
+    qty = parseInt(qty);
+    //console.log(id, avail, qty);
+    if (qty <= 0) {
+      alert("Qty must be positive");
+      return;
+    }
     if (qty > avail) {
       alert(
         "Quantity ordered is higher than available\nOrder cannot be placed ..."
@@ -67,14 +85,16 @@ const Mainmongo = () => {
     } else {
       alert("Order placed ...");
       axios.get(`http://localhost:3001/purchase/${id}/${qty}`).then((res) => {
-        axios.get(`http://localhost:3001/remove_out_of_stock`).then((res2) => {
-          window.location.reload();
-        });
+        window.location.reload();
       });
     }
   };
 
   const addHandler = (id, avail, qty) => {
+    if (qty <= 0) {
+      alert("Invalid Quantity");
+      return;
+    }
     axios.get(`http://localhost:3001/add/${id}/${qty}`).then((res) => {
       //console.log(res.data);
       window.location.reload();
@@ -94,7 +114,7 @@ const Mainmongo = () => {
   useEffect(() => {
     setIsClient(localStorage.getItem("isClient") === "true");
     axios.get("http://localhost:3001").then((res) => {
-      console.log(res.data);
+      //console.log(res.data);
       setData(res.data);
     });
   }, []);
@@ -149,7 +169,7 @@ const Mainmongo = () => {
                   <b>{rows.qty}</b>
                 </td>
 
-                {isClient && (
+                {isClient && rows.qty > 0 && (
                   <td>
                     <center>
                       <button
@@ -163,6 +183,12 @@ const Mainmongo = () => {
                         Purchase
                       </button>
                     </center>
+                  </td>
+                )}
+
+                {isClient && rows.qty === 0 && (
+                  <td>
+                    <center>Out of Stock</center>
                   </td>
                 )}
 

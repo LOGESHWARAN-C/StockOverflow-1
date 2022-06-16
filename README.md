@@ -5,7 +5,7 @@ Stock Overflow is a warehouse stock manager developed using React, MongoDB and E
 ## Getting started
 
 ```powershell
-git clone https://github.com/LOGESHWARAN-C/StockOverflow-1
+git clone https://github.com/LOGESHWARAN-C/StockOverflow-1.git
 cd StockOverflow
 ```
 

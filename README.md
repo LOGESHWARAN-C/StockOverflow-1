@@ -5,24 +5,24 @@ Stock Overflow is a warehouse stock manager developed using React, MongoDB and E
 ## Getting started
 
 ```powershell
-git clone http://
+git clone https://github.com/AkashSCIENTIST/StockOverflow.git
 cd StockOverflow
 ```
 
 After this, open three terminals in the folder
 
-```powershell
+```shell
 cd backend/db
 mongod --dbpath=data --bind_ip 127.0.0.1
 ```
 
-```powershell
+```shell
 cd backend
 npm install
 node Server.js
 ```
 
-```powershell
+```shell
 cd frontend
 npm install
 npm start
@@ -31,6 +31,7 @@ npm start
 ## Login Page (for Admin)
 
 password for admin is "root"
+
 <img src="./images/AdminLogin.png"></img>
 <br>
 
@@ -41,19 +42,21 @@ password for admin is "root"
 `Add` button is used to add more quantity to existing stock
 
 `Delete` button is used to remove a stock from database
-<br>
+
 <img src="./images/AdminDashboard.png"></img>
 <br>
 
 ## Login Page (for Client)
 
 password is not used for Client authentication
+
 <img src="./images/ClientLogin.png"></img>
 <br>
 
 ## Dashboard (for Client)
 
 `Purchase` button is used to purchase a stock (which decreaments the quantity in database)
+
 <img src="./images/ClientDashboard.png"></img>
 
 

@@ -41,7 +41,7 @@ password for admin is "root"
 `Add` button is used to add more quantity to existing stock
 
 `Delete` button is used to remove a stock from database
-<br>
+
 <img src="./images/AdminDashboard.png"></img>
 <br>
 

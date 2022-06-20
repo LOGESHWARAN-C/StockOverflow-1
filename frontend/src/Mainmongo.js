@@ -47,7 +47,8 @@ const Mainmongo = () => {
     var id = prompt("Item ID");
     var name = prompt("Stock name");
     var qty = prompt("Quantity ...");
-    if (parseInt(qty) === parseFloat(qty)) {
+    console.log({id, name, qty});
+    if (parseInt(qty) !== parseFloat(qty)) {
       alert("Qty must be an Integer");
       return;
     }
@@ -67,24 +68,23 @@ const Mainmongo = () => {
       alert("Qty must be an integer");
       return;
     }
-    qty = parseInt(qty);
-    //console.log(id, avail, qty);
-    if (qty <= 0) {
+    var qty_ = parseInt(qty);
+    if (qty_ <= 0) {
       alert("Qty must be positive");
       return;
     }
-    if (qty > avail) {
+    if (qty_ > avail) {
       alert(
         "Quantity ordered is higher than available\nOrder cannot be placed ..."
       );
-    } else if (qty === avail) {
+    } else if (qty_ === avail) {
       alert("Order placed ...");
       axios.get(`http://localhost:3001/delete/${id}`).then((res) => {
         window.location.reload();
       });
     } else {
       alert("Order placed ...");
-      axios.get(`http://localhost:3001/purchase/${id}/${qty}`).then((res) => {
+      axios.get(`http://localhost:3001/purchase/${id}/${qty_}`).then((res) => {
         window.location.reload();
       });
     }
@@ -103,6 +103,12 @@ const Mainmongo = () => {
 
   const deleteHandler = (id) => {
     axios.get(`http://localhost:3001/delete/${id}`).then((res) => {
+      window.location.reload();
+    });
+  };
+
+  const removeOutOfStockHandler = () => {
+    axios.get("http://localhost:3001/remove_out_of_stock").then((res) => {
       window.location.reload();
     });
   };
@@ -137,6 +143,10 @@ const Mainmongo = () => {
       {!isClient && (
         <div className='left'>
           <button onClick={addItem}>+ Add Item</button>
+          &emsp;
+          <button onClick={removeOutOfStockHandler}>
+            Remove all out of stock
+          </button>
         </div>
       )}
 
